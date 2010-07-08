@@ -42,6 +42,7 @@ public class Main : GLib.Object
 		var file = File.new_for_commandline_arg (args[1]);
 		if (!file.query_exists (null)) {
 			stderr.printf ("File '%s' does not exist\n", file.get_path ());
+			return 1;
 		}
 
 
